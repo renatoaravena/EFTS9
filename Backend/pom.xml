@@ -20,6 +20,9 @@
 
     <properties>
         <java.version>21</java.version>
+        <sonar.projectKey>backend</sonar.projectKey>
+        <sonar.projectName>backend</sonar.projectName>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
     </properties>
 
     <dependencies>
@@ -98,6 +101,14 @@
     <build>
         <plugins>
 
+    
+
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>5.1.0.4751</version>
+            </plugin>
+
             <!-- Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -110,7 +121,7 @@
                 <artifactId>dependency-check-maven</artifactId>
                 <version>12.2.0</version>
                 <configuration>
-                    <nvdApiKey>${env.NVD_API_KEY}</nvdApiKey>
+                    <nvdApiKey>ed53d5b1-c4a9-4409-92f0-c3a486580fc4</nvdApiKey>
                 </configuration>
                 <executions>
                     <execution>
